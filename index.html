@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timer</title>
+</head>
+<body>
+    <div class="conteiner">
+        <button id="c-close"><span class="pl">+</span></button>
+        <img src="alarm-clock-svgrepo-com.svg" alt="Clock-icon">
+        <input type="text" id="min" maxlength="2" value="" placeholder="M">
+        <span>:</span>
+        <input type="text" id="sec" maxlength="2" value="" placeholder="S">
+        <button id="set">Set</button>
+    </div>
+    <div class="conteiner2">
+        <img class= "img" src="alarm-clock-svgrepo-com.svg" alt="Clock-icon">
+        <button id="stt">Set Time</button>
+        <div id="time">
+            <span class="min-sec">Min</span>
+            <span class="sec-min">Sec</span>
+            <i class="m" id="m">0</i>
+            <i class="c" id="c">:</i>
+            <i class="s" id="s">0</i>
+        </div>
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+       
+    </div>
+    <div class="alarm">
+        <img src="icons8-notification.gif" alt="icons-notification">
+        <button id="stop">Stop</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
