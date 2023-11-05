@@ -9,6 +9,12 @@ var stopa = document.querySelector("#stop");
 var audio = new Audio("alarm-clock-23772.mp3")
 cMin = 0;
 cSec = 0;
+if(cMin == 0 && cSec == 0){
+    start.disabled = true;
+    reset.disabled = true;
+    start.style.cursor = "not-allowed";
+    reset.style.cursor = "not-allowed";
+}
 timer = null;
 cClose.addEventListener("click", function(){
     conteiner.classList.remove("c-show");
@@ -38,6 +44,19 @@ set.addEventListener("click", function(){
         cSec = 0;
         s.innerHTML = 0;
     }
+    if(cMin > 0 || cSec > 0){
+        start.disabled = false;
+        reset.disabled = false;
+        start.style.cursor = "pointer";
+        reset.style.cursor = "pointer";
+    }
+    else{
+        start.disabled = true;
+        reset.disabled = true;
+        start.style.cursor = "not-allowed";
+        reset.style.cursor = "not-allowed";
+    }
+  
 })
 reset.addEventListener("click", function(){
     s.innerHTML = 0;
@@ -84,6 +103,12 @@ stopa.addEventListener("click", function(){
     audio.currentTime = 0;
     alarmDiv.classList.remove   ("alarm-show");
             conteiner2.style.filter = "blur(0)";
+            if(cMin == 0 && cSec == 0){
+                start.disabled = true;
+                reset.disabled = true;
+                start.style.cursor = "not-allowed";
+                reset.style.cursor = "not-allowed";
+            }
 })
 
 
